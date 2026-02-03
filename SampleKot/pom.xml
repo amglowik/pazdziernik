@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.glowik.examples</groupId>
+		<artifactId>GlowikExamples</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.glowik</groupId>
+	<artifactId>SampleKot</artifactId>
+	<version>1.2-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>SampleKot</name>
+	<url>http://maven.apache.org</url>
+	<organization>
+		<name>Andrew Glowik</name>
+		<url>http://amglowik.photoshop.com/</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>amglowik</id>
+			<name>Andrew M. Glowik</name>
+			<email>amglowik@verizon.net</email>
+			<organization>Andrew M. Glowik</organization>
+			<organizationUrl>http://amglowik.photoshop.com/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>pim-repository</id>
+			<name>Releases</name>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>pim-snapshot-repository</id>
+			<name>Snapshots</name>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
