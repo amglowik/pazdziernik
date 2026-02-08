@@ -1,11 +1,11 @@
 package com.glowik.Decorator.DoorController;
 
-import org.apache.log4j.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class DoorControllerFrontDoor implements DoorControllerIF {
-	static Logger logger = Logger.getLogger(DoorControllerFrontDoor.class);
+	static Logger logger = LoggerFactory.getLogger(DoorControllerFrontDoor.class);
 	
 	@Override
 	public void requestOpen(String key) {

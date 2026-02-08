@@ -1,6 +1,8 @@
 package com.glowik.Decorator;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * @date August 26,2012
@@ -10,7 +12,7 @@ import org.apache.log4j.Logger;
 // implementation of a simple coffee without any extra ingredients
 public class SimpleCoffee implements Coffee {
 	
-	static Logger logger = Logger.getLogger(SimpleCoffee.class);
+	static Logger logger = LoggerFactory.getLogger(SimpleCoffee.class);
 	
 	public double getCost() {
 		return 1;
